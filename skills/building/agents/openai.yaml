@@ -1,0 +1,4 @@
+interface:
+  display_name: "Building"
+  short_description: "승인된 Shape Up package를 build, release, close합니다."
+  default_prompt: "승인된 package.md를 기준으로 Shape Up Building 방식으로 구현과 release 준비를 진행해줘."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shaping"
+  short_description: "Shape Up project를 frame, shape, package까지 정리합니다."
+  default_prompt: "이 작업을 Shape Up 방식으로 frame, shape, package 인계까지 정리해줘."
