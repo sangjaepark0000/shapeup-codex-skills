@@ -24,17 +24,19 @@ When asking a shaping question:
 
 Breadboard와 Fat Marker Sketch는 같은 목적을 가진 서로 다른 shaping 도구다. 둘 다 build 전 불확실성을 줄이되, 너무 구체적이지도 너무 추상적이지도 않게 만든다. `02-shape.md`나 `03-package.md`에서 둘 중 하나를 쓰거나 함께 쓸 때는 `references/breadboard.md`를 읽는다.
 
-텍스트 Breadboard는 페이지 흐름보다 요소와 관계를 적는다. 기본 출력은 bullet list가 아니라, places, affordances, connections가 한 화면에서 보이는 compact text board다.
+텍스트 Breadboard는 페이지 흐름보다 요소와 관계를 적는다. 기본 출력은 bullet list가 아니라, places/contexts, components, affordances, connections가 한 화면에서 보이는 compact text board다. Affordance는 보통 component에서 나온다. 따라서 `Place -> Affordance -> Next`가 아니라 `Place -> Component -> Affordance -> Next` 구조로 쓴다.
 
-한국어 place 이름은 자연스러운 명사로 쓴다. `후보 비교면`, `판단 해석면`, `탐색 소스면`처럼 `place/surface`를 `-면` 접미사로 표시하지 않는다. 실제 페이지나 화면이면 `상품 상세 페이지`, `후보 비교`처럼 자연스럽게 쓰고, 페이지가 아닌 상태나 artifact를 구분해야 하면 `_판단 해석`, `_탐색 소스`, `_다음 탐색 세팅`처럼 `_`를 붙인다.
+한국어 place/context 이름은 자연스러운 명사로 쓴다. `후보 비교면`, `판단 해석면`, `탐색 소스면`처럼 `place/surface`를 `-면` 접미사로 표시하지 않는다. 실제 페이지나 화면이면 `상품 상세 페이지`, `후보 비교`처럼 자연스럽게 쓰고, 페이지가 아닌 상태나 artifact를 구분해야 하면 `_판단 해석`, `_다음 탐색 세팅`처럼 `_`를 붙인다. `탐색 소스`, `후보 카드`, `판단 요약`처럼 interaction을 구성하는 product component는 기본 요소로 쓴다.
 
-- `[Place]`: 화면, 모달, 메뉴, 상태, artifact처럼 사용자가 도달하는 곳. 페이지가 아닌 상태/artifact는 필요하면 `_상태명`으로 표시한다.
-- `(Affordance)`: 버튼, 입력, 링크, 명령, prompt, 문구처럼 사용자가 읽거나 조작하는 것.
+- `[Place/context]`: 화면, 모달, 메뉴, 의미 있는 맥락처럼 사용자가 도달하는 곳. 페이지가 아닌 상태/artifact는 필요하면 `_상태명`으로 표시한다.
+- `Component`: product element, object, card, list, field, message, summary, visible information처럼 interaction을 구성하는 요소.
+- `(Affordance)`: component가 사용자에게 제공하는 행동/이해 가능성. 버튼, 입력, 링크, 명령, prompt, 문구처럼 사용자가 읽거나 조작하는 것.
 - `->`: 어떤 행동이 어떤 상태, 장소, artifact, decision으로 이어지는가.
 
 ```text
-[Place]
-  (Affordance) -> [State or artifact]
+[Place/context]
+  Component
+    (Affordance) -> [State or artifact]
 ```
 
 Fat Marker Sketch는 보이는 표면, rough arrangement, grouping, emphasis가 solution의 중요한 부분일 때 쓴다. Breadboard의 대체재로만 취급하지 않는다. Breadboard와 나란히 둘 수 있고, 시나리오 안에서 중요한 여러 순간의 rough visible surface를 그릴 수 있다. 흐름도나 logic diagram이 아니며, package 수신자가 핵심 형태를 볼 수 있게 하는 용도다.
@@ -124,7 +126,7 @@ The shape is probably strong enough when:
 
 - The rough result is visible.
 - There is a core flow.
-- The Breadboard shows places, affordances, and connections in a compact text board.
+- The Breadboard shows places/contexts, components, affordances, and connections in a compact text board.
 - If the shape is hard to picture, a Fat Marker Sketch shows the important scenario moments as rough surfaces, not as a pure flow diagram.
 - Not doing is explicit.
 - Risks are visible.
