@@ -21,15 +21,16 @@ Reactive / urgent bugfix.
 
 ## Better Flow
 
-Use a bugfix or diagnosis loop:
+Use a diagnosis loop:
 
 1. Reproduce the login failure.
-2. Capture the exact symptom.
-3. Form ranked hypotheses.
-4. Instrument the smallest useful boundary.
-5. Fix the cause.
-6. Add or update a regression check.
-7. Release the fix.
+2. Minimise the repro.
+3. Capture the exact symptom.
+4. Form ranked hypotheses.
+5. Instrument the smallest useful boundary.
+6. Fix the cause.
+7. Add or update a regression check.
+8. Release the fix.
 
 ## What To Record
 

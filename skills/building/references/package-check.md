@@ -32,6 +32,7 @@ Read if present:
 - `shapeup/product-memory.md`
 - `shapeup/project-index.md`
 - `project.md` beside the package
+- `CONTEXT.md` or relevant ADRs when the package touches unfamiliar domain or architecture
 
 Do not read every closed project unless the user names one.
 

@@ -38,6 +38,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - `references/scope-filter.md`: 후보 기능을 이번 package에 넣을지 자를 때.
 - `references/framing-checklist.md`: 문제, baseline, outcome, appetite가 흐릿할 때.
 - `references/shaping-checklist.md`: solution boundary, breadboard, material unknown이 흐릿할 때.
+- `references/domain-decisions.md`: shaping 중 용어, product memory, ADR 후보가 생길 때.
 - `references/package-template.md`: `03-package.md`를 작성할 때.
 - `references/betting-questions.md`: `Package Approved` 전에 gate를 확인할 때.
 
@@ -124,6 +125,8 @@ When enough is known, summarize the shaped boundary and write the package. Do no
 Read `references/package-template.md` and write `03-package.md` in the project workspace.
 
 If an important product decision first appears while writing the package, stop and return to Framing or Shaping.
+
+Read `references/domain-decisions.md` when shaping creates durable terminology or a hard-to-reverse decision.
 
 The package should let a new Codex session start the first vertical slice using only the package and local repo context.
 

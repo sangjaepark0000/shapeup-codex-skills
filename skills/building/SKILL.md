@@ -40,10 +40,12 @@ description: 사용자가 승인된 Shape Up package를 기반으로 build를 �
 필요할 때만 읽는다.
 
 - `references/package-check.md`: package를 읽고 build 가능 여부를 확인할 때.
+- `references/codebase-context.md`: 기존 코드베이스가 낯설거나 touched surface가 넓을 때.
 - `references/kickoff-template.md`: `04-build-kickoff.md`를 만들 때.
 - `references/build-log-template.md`: rough tasks, slice contracts, discovered tasks를 기록할 때.
 - `references/scope-map-template.md`: `05-scope-map.md`와 hill status를 갱신할 때.
 - `references/slice-contract.md`: integrated slice를 시작할 때.
+- `references/feedback-loops.md`: TDD, diagnosis, browser/manual verification 중 적절한 loop를 고를 때.
 - `references/hill-status.md`: progress를 task count 대신 unknown 기준으로 표현할 때.
 - `references/feedback-triage.md`: build 중 feedback이나 새 아이디어를 분류할 때.
 - `references/scope-hammering.md`: timebox 안에서 scope를 줄일 때.
@@ -78,6 +80,8 @@ Read `references/package-check.md`, then read:
 
 Do not read all closed projects unless the user names one.
 
+Read `references/codebase-context.md` if the relevant code area is unfamiliar or the package touches shared surfaces.
+
 ## Kickoff
 
 Read `references/kickoff-template.md` and create `04-build-kickoff.md` or the repo's existing kickoff filename.
@@ -109,6 +113,8 @@ Use the scope map for:
 Read `references/slice-contract.md` before each slice.
 
 The first slice should be the smallest end-to-end path that is demoable or verifiable. Prefer `Wired but Ugly` before polish.
+
+Read `references/feedback-loops.md` when choosing tests, browser checks, or diagnosis loops for the slice.
 
 Do not finish backend-only, frontend-only, or data-model-only work as a complete slice.
 

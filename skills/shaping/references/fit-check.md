@@ -24,7 +24,7 @@ If the user invoked `shaping`, default to continuing. The goal is not to ask "Sh
 
 ## Lighter Alternatives
 
-- Reactive work: bugfix, ops flow, or diagnosis loop.
+- Reactive work: use a diagnosis loop: reproduce, minimise, hypothesise, instrument, fix, regression-check.
 - Unknown-first work: spike or exploration.
 - Dependency-heavy work: dependency-tracking flow.
 - Launch cleanup: cleanup checklist.

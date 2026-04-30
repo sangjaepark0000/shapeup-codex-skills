@@ -19,6 +19,9 @@ Not doing in this slice:
 Success check:
 -
 
+Feedback loop:
+-
+
 Current unknown:
 -
 ```
@@ -28,5 +31,6 @@ Current unknown:
 - The slice must be end-to-end and demoable or verifiable.
 - Prefer the most unknown scope early.
 - Aim for `Wired but Ugly` before polish.
+- Pick the smallest trustworthy feedback loop for this slice.
 - If the contract conflicts with the package, stop and return to shaping/package.
 - Record the contract in `06-build-log.md`.
