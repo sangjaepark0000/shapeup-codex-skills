@@ -24,7 +24,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - package를 쓰기 전에는 문제, appetite, solution boundary가 대충이라도 닫혀 있어야 한다.
 - `Package Approved` 전에는 build를 시작하지 않는다.
 - problem, baseline, desired outcome, appetite가 흔들리면 Framing으로 되돌아간다.
-- build 중 `왜/무엇` 질문이 다시 나오면 framing 또는 shaping으로 되돌린다.
+- build 중 `왜/무엇` 질문이 다시 나오면 Framing 또는 Shaping으로 되돌린다.
 - `parking-lot`은 backlog가 아니다.
 - `product-memory`는 project log가 아니다.
 
@@ -37,7 +37,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - `references/candidate-mode.md`: raw request를 candidate로 나누고 Framing/Shaping 대상으로 삼을 후보를 고를 때.
 - `references/candidate-lifecycle.md`: Framing/Shaping 중 새 candidate, not-now, dropped 후보가 생길 때.
 - `references/scope-filter.md`: 후보 기능을 이번 package에 넣을지 자를 때.
-- `references/framing-checklist.md`: 문제, baseline, outcome, appetite가 흐릿할 때.
+- `references/framing-checklist.md`: problem, baseline, outcome, appetite가 흐릿할 때.
 - `references/shaping-checklist.md`: solution boundary, breadboard, material unknown이 흐릿할 때.
 - `references/domain-decisions.md`: shaping 중 용어, product memory, ADR 후보가 생길 때.
 - `references/package-template.md`: `03-package.md`를 작성할 때.
@@ -45,63 +45,72 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 
 ## Flow
 
-1. Read workspace context.
-2. Run a quiet fit check.
-3. Sort the raw request into one or more candidates and choose what to frame.
-4. Apply the scope filter before extra features enter the package.
-5. Move between framing and shaping as needed until problem, appetite, and solution boundary are coherent.
-6. Summarize the current frame/shape before packaging.
-7. Write the package.
-8. Ask for explicit `Package Approved`.
-9. Stop before build unless the user separately asks to build from the approved package.
+1. workspace context를 읽는다.
+2. 조용히 fit check를 한다.
+3. raw request를 하나 이상의 candidate로 나누고 무엇을 frame할지 고른다.
+4. 선택되지 않은 candidate를 `references/candidate-lifecycle.md`에 따라 즉시 정리한다. durable future candidate를 project-local notes 안에만 남기지 않는다.
+5. extra feature가 package에 들어오기 전에 scope filter를 적용한다.
+6. problem, appetite, solution boundary가 coherent해질 때까지 Framing과 Shaping 사이를 오간다.
+7. package 전에 현재 frame/shape를 요약한다.
+8. 왜 이 shape가 나왔는지 설명한다. 더 큰 아이디어의 첫 slice라면 왜 이 slice가 먼저인지도 설명하고, package로 굳히기 전에 가볍게 다듬을 시간을 둔다.
+9. package를 작성한다.
+10. 명시적인 `Package Approved`를 요청한다.
+11. 사용자가 별도로 승인된 package에서 build를 요청하지 않으면 build 전에 멈춘다.
 
 ## Start
 
-Read `references/workspace.md`, then inspect only the relevant workspace files:
+`references/workspace.md`를 읽고, 관련 workspace 파일만 확인한다.
 
 - `shapeup/product-memory.md`
 - `shapeup/parking-lot.md`
 - `shapeup/project-index.md`
-- A specific `project.md` if the user provides one
+- 사용자가 특정 project path를 제공한 경우 해당 `project.md`
 
-Do not read all of `shapeup/closed/` unless the user names a closed project.
+사용자가 closed project를 지정하지 않는 한 `shapeup/closed/` 전체를 읽지 않는다.
 
 ## Fit Check
 
-If the user invoked this skill, default to "Shape Up으로 진행". Do not ask for permission to use Shape Up again.
+사용자가 이 skill을 호출했다면 기본값은 "Shape Up으로 진행"이다. 다시 Shape Up을 쓸지 허락받지 않는다.
 
-Read `references/fit-check.md` only when the request looks like it may be urgent, tiny, exploratory, dependency-heavy, or launch cleanup.
+요청이 urgent, tiny, exploratory, dependency-heavy, launch cleanup처럼 보일 때만 `references/fit-check.md`를 읽는다.
 
-If Shape Up clearly does not fit, stop and suggest a lighter flow. If unclear, continue and reassess during Framing.
+Shape Up이 명백히 맞지 않으면 멈추고 더 가벼운 흐름을 제안한다. 애매하면 Framing으로 계속 가되, 진행 중 다시 판단한다.
 
 ## Candidate Sorting
 
-Read `references/candidate-mode.md` before Framing when the request is broad, mixed, revived from parking lot, or could be bugfix/cleanup/spike/dependency work.
+요청이 넓거나, 여러 일이 섞여 있거나, parking lot에서 되살아났거나, bugfix/cleanup/spike/dependency work일 수 있으면 Framing 전에 `references/candidate-mode.md`를 읽는다.
 
-Candidate Sorting does not solve the uncertainty. It chooses which candidate deserves Framing/Shaping.
+Candidate Sorting은 불확실성을 해결하지 않는다. 어떤 candidate를 Framing/Shaping으로 가져갈지 고른다.
 
-Read `references/candidate-lifecycle.md` when Framing or Shaping reveals a different candidate, a follow-up candidate, a not-now candidate, or a candidate that should be dropped.
+Framing 또는 Shaping 중 다른 candidate, follow-up candidate, not-now candidate, dropped candidate가 드러나면 `references/candidate-lifecycle.md`를 읽는다.
 
-Separate:
+다음을 분리한다.
 
 - Long-term product area
 - First package candidate
 - Follow-up candidates
 - Parking lot candidates
 
-For a narrow feature request, keep this step lightweight: name the candidate in one sentence and enter Framing.
+좁은 feature request라면 이 단계는 가볍게 유지한다. candidate를 한 문장으로 이름 붙이고 Framing으로 들어간다.
+
+Candidate Sorting 뒤에는 선택되지 않은 모든 candidate를 작성 시점에 정리한다.
+
+- `Not this package`: 현재 project notes에 boundary로 남긴다.
+- `Parking lot`: distinct future bet으로 돌아올 수 있으면 repo-level `shapeup/parking-lot.md`를 즉시 갱신한다.
+- `Dropped`: decision을 설명할 때만 durable record를 남긴다.
+- `Spike`: 선택된 package 안에 숨기지 말고 별도 learning candidate로 기록한다.
 
 ## Scope Filter
 
-Read `references/scope-filter.md` whenever a candidate attracts "also", "while we are here", "later we need", or new user role/object/privacy/permission ideas.
+candidate가 "also", "while we are here", "later we need" 또는 새 user role/object/privacy/permission 아이디어를 끌어들이면 `references/scope-filter.md`를 읽는다.
 
-Default to `No / Parking Lot` unless the feature is required for the first bet inside the appetite.
+기본값은 `No`다. 첫 bet이 appetite 안에서 작동하는 데 필수일 때만 package에 남긴다. 제외된 기능이 distinct future bet으로 돌아올 수 있을 때만 `Parking Lot`을 사용한다.
 
 ## Framing
 
-Framing is a conversation, not a form. Ask only the next needed question.
+Framing은 conversation이지 form이 아니다. checklist를 그대로 chat에 던지지 않는다.
 
-Read `references/framing-checklist.md` while closing:
+닫아야 할 항목을 확인할 때 `references/framing-checklist.md`를 읽는다.
 
 - Problem
 - Current alternative
@@ -110,13 +119,13 @@ Read `references/framing-checklist.md` while closing:
 - Success criteria
 - Appetite
 
-When enough is known, summarize the frame and move into shaping. Do not treat this as a heavy gate; it is just a checkpoint that can be revisited.
+충분히 알게 되면 frame을 요약하고 shaping으로 간다. 이것은 무거운 gate가 아니라 다시 돌아올 수 있는 checkpoint다.
 
 ## Shaping
 
-Shaping finds a buildable shape without locking implementation details.
+Shaping은 구현 세부사항을 고정하지 않고 build 가능한 shape를 찾는다.
 
-Read `references/shaping-checklist.md` while closing:
+닫아야 할 항목을 확인할 때 `references/shaping-checklist.md`를 읽는다.
 
 - Core change
 - Breadboard
@@ -125,40 +134,35 @@ Read `references/shaping-checklist.md` while closing:
 - Material unknowns
 - Appropriate abstraction level
 
-When enough is known, summarize the shaped boundary and write the package. Do not treat this as irreversible; if packaging reveals a weak problem or boundary, move back.
+충분히 알게 되면 shaped boundary를 요약하고 package를 작성한다. 되돌릴 수 없는 단계로 취급하지 않는다. package 작성 중 problem이나 boundary가 약하다는 것이 드러나면 다시 돌아간다.
+
+package 전에 reasoning path를 짧게 설명한다. 왜 이 solution boundary가 나왔는지, 어떤 대안을 잘랐는지, 왜 이 slice가 later candidate보다 먼저인지 설명한다. 결론이 package로 굳기 전에 사용자가 가볍게 조정할 수 있게 한다.
 
 ## Package
 
-Read `references/package-template.md` and write `03-package.md` in the project workspace.
+`references/package-template.md`를 읽고 project workspace 안에 `03-package.md`를 작성한다.
 
-If an important product decision first appears while writing the package, stop and return to Framing or Shaping.
+package 작성 중 중요한 product decision이 처음 나타나면 멈추고 Framing 또는 Shaping으로 돌아간다.
 
-Read `references/domain-decisions.md` when shaping creates durable terminology or a hard-to-reverse decision.
+shaping 중 durable terminology나 되돌리기 어려운 decision이 생기면 `references/domain-decisions.md`를 읽는다.
 
-The package should let a new Codex session start the first vertical slice using only the package and local repo context.
+package는 새 Codex session이 package와 local repo context만으로 첫 vertical slice를 시작할 수 있어야 한다.
 
 ## Package Approval
 
-Read `references/betting-questions.md`.
+`references/betting-questions.md`를 읽는다.
 
-`Package Approved` must be explicit. Framing and shaping checkpoints can be lightweight, but build approval cannot be implied.
+`Package Approved`는 명시적이어야 한다. 사용자의 자연스러운 approval 표현은 받아들이되, 침묵, package path, 반대 없음만으로는 승인으로 추론하지 않는다. Framing과 Shaping checkpoint는 가벼울 수 있지만 build approval은 암시될 수 없다.
 
-Accept signals like:
-
-- "승인"
-- "이 package로 build"
-- "go"
-- "approved"
-
-After approval, update `project.md` if present. Do not start build unless the user asks for build or invokes the building flow.
+approval 뒤에는 `project.md`가 있으면 갱신한다. 사용자가 build를 요청하거나 building flow를 호출하지 않는 한 build를 시작하지 않는다.
 
 ## Review Response
 
-When package writing is done, tell the user:
+package 작성이 끝나면 사용자에게 다음을 짧게 알려준다.
 
 - Package file path
-- Decisions closed or intentionally left flexible during shaping
-- Remaining pre-build checks, if any
-- Current `project.md` status
+- shaping 중 닫은 decision 또는 의도적으로 유연하게 남긴 decision
+- 남은 pre-build check가 있다면 그것
+- 현재 `project.md` status
 
-Keep the response short. The package is the source of truth.
+응답은 짧게 유지한다. package가 source of truth다.

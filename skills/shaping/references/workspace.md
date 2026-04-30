@@ -1,23 +1,23 @@
 # Workspace
 
-Use this when starting a shaping session or deciding where to write outputs.
+shaping session을 시작하거나 산출물을 어디에 둘지 정할 때 사용한다.
 
-## Read First
+## 먼저 읽기
 
-Read these files if they exist:
+있으면 다음 파일을 읽는다.
 
 - `shapeup/product-memory.md`
 - `shapeup/parking-lot.md`
 - `shapeup/project-index.md`
-- A specific `project.md` if the user provides a project path
+- 사용자가 project path를 제공한 경우 해당 `project.md`
 
-Do not read every closed project. Closed projects are history, not default context.
+모든 closed project를 읽지 않는다. closed project는 history이지 기본 context가 아니다.
 
-`shapeup/notes/operating-model.md` is reference material. Read it only when the user asks or when local conventions are unclear.
+`shapeup/notes/operating-model.md`는 reference material이다. 사용자가 요청했거나 local convention이 불명확할 때만 읽는다.
 
 ## Product Memory
 
-Look for:
+다음을 확인한다.
 
 - Vision
 - Strategy
@@ -26,17 +26,21 @@ Look for:
 - Durable decisions
 - Repeated no-go decisions
 
-Do not add project logs here. Add only decisions that future projects should inherit by default.
+여기에 project log를 추가하지 않는다. future project가 기본값으로 이어받아야 하는 decision만 추가한다.
 
 ## Parking Lot
 
-Parking lot is not a backlog or queue. Do not pick the next project from it.
+Parking lot은 backlog나 queue가 아니다. 여기서 다음 project를 고르지 않는다.
 
-Only revive an item when it has become important again in the current context. Treat revived items as candidates that still need Framing.
+현재 context에서 다시 중요해졌을 때만 항목을 되살린다. 되살린 항목도 Framing이 필요한 candidate로 다룬다.
+
+현재 요청이 기존 parking-lot row와 관련되면 중복 row를 만들지 말고 `Signals`, `Last Seen`, `Sources`를 갱신한다. 반복 출현은 pressure signal이지 그 자체로 선택 이유가 아니다.
+
+기본적으로 old active 또는 closed project notes를 훑어 candidate를 찾지 않는다. 사용자가 previous candidate를 review, harvest, reconcile하라고 명시했을 때만 한다.
 
 ## Default Project Workspace
 
-When the user does not specify a location, create:
+사용자가 위치를 지정하지 않으면 다음 구조를 만든다.
 
 ```text
 shapeup/
@@ -48,7 +52,7 @@ shapeup/
       03-package.md
 ```
 
-If the repo already uses `cycles/`, keep the existing structure for that project. Use `shapeup/active/` for new projects.
+repo가 이미 `cycles/`를 쓰고 있으면 해당 project는 기존 구조를 유지한다. 새 project에는 `shapeup/active/`를 사용한다.
 
 ## Project Status Board
 
