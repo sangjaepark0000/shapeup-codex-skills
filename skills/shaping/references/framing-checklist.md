@@ -17,6 +17,8 @@ When asking a question:
 - Baseline: where does the current way break?
 - Desired outcome: what state changes after this work?
 - Success criteria: how will we know it improved?
+- Why now: why should this candidate get shaping attention before other possible work?
+- Opportunity cost: what work, risk, or delay are we accepting by betting here?
 - Appetite: what time and scope boundary should shape the solution?
 
 ## Framing Checkpoint
@@ -31,6 +33,8 @@ The frame is probably strong enough when:
 - Desired outcome is a state change, not just a feature name.
 - There is a success criterion.
 - There is a reason users will act now.
+- There is a reason the team should act now.
+- The opportunity cost is visible enough to make the bet intentional.
 - First use is visible even from an empty state.
 - The original feature request has been narrowed to the actual breaking point.
 - Appetite acts as a constraint on the solution.

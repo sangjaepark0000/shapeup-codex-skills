@@ -28,6 +28,8 @@ Record in `06-build-log.md` or `05-scope-map.md`:
 
 Do not promote package outside ideas directly to global parking lot. First classify them in `06-build-log.md`.
 
+Package outside ideas move to `shapeup/parking-lot.md` only after candidate promotion. A nice-to-have, implementation temptation, or one-off edge case can stay in the build log or be dropped.
+
 ## Stop And Return To Shaping
 
 Stop when build needs a change to:
@@ -39,6 +41,14 @@ Stop when build needs a change to:
 - User role or permission model.
 - Appetite.
 - Package success definition.
+- Downside cap or circuit breaker.
+
+Also stop and report when:
+
+- One integrated slice is demoable or verifiable.
+- A package-outside scope appears required for the desired outcome.
+- The same scope remains `Uphill` across two checkpoints.
+- Verification failure suggests the package shape is wrong, not merely the implementation.
 
 ## Feedback Classes
 

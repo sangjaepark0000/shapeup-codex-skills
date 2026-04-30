@@ -26,14 +26,18 @@ description: 사용자가 승인된 Shape Up package를 기반으로 build를 �
 - package를 source of truth로 둔다.
 - package가 속한 project workspace를 build 산출물 위치로 둔다.
 - `project.md`가 있으면 상태를 갱신한다.
+- 정본 문서의 우선순위는 package, `project.md`, scope map/build log, agent notes 순서다.
 - build 중 `왜/무엇` 질문을 다시 정하지 않는다.
 - `어떻게` 질문은 build 안에서 해결한다.
 - horizontal layer가 아니라 integrated slice로 만든다.
+- async build는 모든 scope를 동시에 병렬 구현한다는 뜻이 아니다. package, scope map, first slice, shared assumptions가 충분히 명확해서 잦은 sync 없이 자율적으로 전진할 수 있다는 뜻이다.
 - task는 build 중 발견되는 것이 정상이다.
 - 진행률은 task 수가 아니라 unknown이 known으로 바뀌는 정도로 본다.
 - 품질을 낮추지 말고 범위를 줄인다.
 - package 밖 기능은 추가하지 않는다.
+- package 밖 아이디어는 먼저 build log에 기록한다. 반복 신호이거나 boundary를 설명하는 distinct future bet만 parking lot 후보로 승격한다.
 - 구현 완료와 release와 close를 구분한다.
+- appetite 안에서 핵심 outcome을 만들 수 없으면 기본 연장하지 않는다. scope를 hammer하거나 shaping/package로 되돌린다.
 
 ## References
 
@@ -89,6 +93,8 @@ Read `references/kickoff-template.md` and create `04-build-kickoff.md` or the re
 
 Report briefly after kickoff. If the user does not stop you, continue inside the approved package.
 
+The kickoff must make the bet concrete: appetite, first slice, most unknown scope, Wired but Ugly target, checkpoint policy, and stop rule.
+
 ## Build Log And Scope Map
 
 Read `references/build-log-template.md` and `references/scope-map-template.md`.
@@ -114,6 +120,8 @@ Use the scope map for:
 Read `references/slice-contract.md` before each slice.
 
 The first slice should be the smallest end-to-end path that is demoable or verifiable. Prefer `Wired but Ugly` before polish.
+
+`Wired but Ugly` means the core path is actually connected across the relevant surfaces: data/state, user action, and visible result. Temporary UI, rough copy, and plain styling are acceptable; backend-only, frontend-only, or model-only work is not a completed slice.
 
 Read `references/feedback-loops.md` when choosing tests, browser checks, or diagnosis loops for the slice.
 
@@ -141,6 +149,8 @@ Record but continue for scope map changes, cut scope, hill status changes, known
 
 Stop and return to shaping/package when desired outcome, core object, privacy/public visibility, user roles, no-go, or appetite changes.
 
+Stop and report when kickoff is written, one integrated slice is demoable, a package-outside scope appears required, the same scope stays `Uphill` across two checkpoints, or verification failure points to product/shape judgment.
+
 ## Scope Hammering
 
 Read `references/scope-hammering.md` when timebox pressure appears.
@@ -151,7 +161,7 @@ Keep quality fixed. Cut nice-to-have work. Do not cut the core outcome.
 
 Use subagents only when explicitly allowed by the active Codex instructions and when a bounded side task can run in parallel.
 
-If used, give each subagent a narrow slice, file ownership, package boundaries, and no-go. Subagents write notes under `agent-notes/`; the main builder owns canonical docs.
+If used, treat subagents as helpers on the current slice, not horizontal layer owners. Give each subagent a narrow slice, file ownership, package boundaries, and no-go. Subagents write notes under `agent-notes/`; the main builder owns canonical docs.
 
 ## Built
 

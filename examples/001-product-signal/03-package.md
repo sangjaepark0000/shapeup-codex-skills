@@ -20,6 +20,20 @@ Codex execution budget:
 - Existing or local persistence
 - Build plus browser smoke verification
 
+## Bet / Commitment
+
+Timebox:
+- 1 week MVP
+
+Downside cap:
+- If aggregate interest cannot be proven on one product detail surface inside the appetite, cut secondary states before adding new flows.
+
+Interrupt policy:
+- Build should continue through implementation trade-offs, copy choices, and persistence details as long as the aggregate-only desired outcome stays intact.
+
+Circuit breaker:
+- If the work requires chat, offers, seller identity, or a broader marketplace model, stop and return to shaping instead of extending the package.
+
 ## Breadboard
 
 Places:
@@ -64,6 +78,7 @@ Start with one product detail page where a user can toggle interest and see the 
 
 - Do not reopen whether this is a marketplace.
 - Keep quality fixed and cut secondary states first.
+- Do not extend the appetite by default; hammer scope or return to shaping.
 - Package outside ideas go to `06-build-log.md`.
 
 ## Parking Lot / Feature Temptations

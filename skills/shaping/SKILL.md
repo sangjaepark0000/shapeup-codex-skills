@@ -153,12 +153,14 @@ Read `references/betting-questions.md`.
 
 `Package Approved` must be explicit. Framing and shaping checkpoints can be lightweight, but build approval cannot be implied.
 
-Accept signals like:
+Accept clear signals like:
 
-- "승인"
-- "이 package로 build"
-- "go"
-- "approved"
+- "Package Approved"
+- "이 package로 build 승인"
+- "이 범위와 appetite로 진행"
+- "approved for build"
+
+Do not treat vague reactions like "ok", "go", "sounds good", or silence as approval by themselves.
 
 After approval, update `project.md` if present. Do not start build unless the user asks for build or invokes the building flow.
 

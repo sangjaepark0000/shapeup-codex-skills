@@ -9,6 +9,7 @@ Use this before building.
 - Why.
 - Desired outcome.
 - Appetite.
+- Bet / commitment, or enough appetite context to infer downside cap safely.
 - Breadboard.
 - Not doing / no-go.
 - Risks.
@@ -18,13 +19,17 @@ Use this before building.
 
 Approval can come from:
 
-- The user's current message explicitly says to build from or approve the package.
+- The user's current message explicitly says to build from or approve this package and scope.
 - `project.md` has a filled `Package Approved` checkpoint.
 - The package contains an approval marker used by the repo.
+
+Do not treat a vague reaction like "ok", "go", "sounds good", or silence as approval by itself.
 
 If approval is missing, stop and ask for approval or return to package review.
 
 If any package content is missing and the missing information affects `why/what/scope`, stop and return to shaping or package review.
+
+If the package has no clear downside cap or circuit breaker and the appetite cannot be inferred safely, stop and clarify the bet before building.
 
 ## Rabbit Hole Check
 
@@ -58,6 +63,9 @@ If `project.md` exists, set `Status: Building`. If it does not exist, create:
 
 Status: Building
 Source of Truth: ./03-package.md
+Appetite:
+Target Stop Date:
+Circuit Breaker:
 
 ## Checkpoints
 

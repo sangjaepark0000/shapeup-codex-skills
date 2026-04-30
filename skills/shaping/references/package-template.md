@@ -19,6 +19,20 @@ Human appetite:
 Codex execution budget:
 -
 
+## Bet / Commitment
+
+Timebox:
+-
+
+Downside cap:
+-
+
+Interrupt policy:
+-
+
+Circuit breaker:
+- If the desired outcome cannot be built inside the appetite, do not extend by default. Cut scope, re-shape, or stop.
+
 ## Breadboard
 
 Places:
@@ -68,6 +82,7 @@ Moment 2: [what changes after the important action/state]
 
 - Do not reopen why/what during build.
 - Keep quality fixed and cut scope when needed.
+- Do not extend the appetite by default; hammer scope or return to shaping/package.
 - Package outside ideas go to build-log, not directly to global parking lot.
 
 ## Parking Lot / Feature Temptations
