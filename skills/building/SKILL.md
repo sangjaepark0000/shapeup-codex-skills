@@ -48,6 +48,7 @@ description: 사용자가 승인된 Shape Up package를 기반으로 build를 �
 - `references/feedback-loops.md`: TDD, diagnosis, browser/manual verification 중 적절한 loop를 고를 때.
 - `references/hill-status.md`: progress를 task count 대신 unknown 기준으로 표현할 때.
 - `references/feedback-triage.md`: build 중 feedback이나 새 아이디어를 분류할 때.
+- `references/candidate-promotion.md`: build 중 package 밖 아이디어를 future candidate로 승격할지 판단할 때.
 - `references/scope-hammering.md`: timebox 안에서 scope를 줄일 때.
 - `references/release-template.md`: `07-release.md`를 만들 때.
 - `references/retro-template.md`: `08-retro.md`를 만들 때.

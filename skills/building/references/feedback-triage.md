@@ -26,6 +26,8 @@ Record in `06-build-log.md` or `05-scope-map.md`:
 - QA/feedback classification.
 - Release target changed.
 
+Do not promote package outside ideas directly to global parking lot. First classify them in `06-build-log.md`.
+
 ## Stop And Return To Shaping
 
 Stop when build needs a change to:
@@ -46,3 +48,16 @@ Stop when build needs a change to:
 - Nice-to-have: record in build log; do not add by default.
 - New why/what: stop and return to shaping.
 - Urgent production bug: separate from this project build.
+
+## Candidate Promotion
+
+Promote a build-time idea to `shapeup/parking-lot.md` only when it is likely to matter again:
+
+- It represents a distinct future bet.
+- It appeared repeatedly during build or feedback.
+- It explains an important package boundary.
+- It needs future Framing/Shaping with fresh context.
+
+Keep it in `06-build-log.md` only when it is useful local context but not a future candidate.
+
+Drop it when it is only a nice-to-have or implementation temptation.

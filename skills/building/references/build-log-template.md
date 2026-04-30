@@ -42,6 +42,13 @@ Current unknown:
 | Idea | Classification | Handling |
 |---|---|---|
 
+## Candidate Promotions
+
+Only promote ideas that may matter again, explain a boundary, or represent a distinct future bet.
+
+| Candidate | Source | Why It Might Return | Destination |
+|---|---|---|---|
+
 ## Verification
 
 | Check | Result | Notes |

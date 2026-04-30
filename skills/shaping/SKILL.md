@@ -35,6 +35,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - `references/workspace.md`: 시작 프로토콜, 파일 구조, project workspace를 정할 때.
 - `references/fit-check.md`: Shape Up을 쓰지 말아야 할지 빠르게 판단할 때.
 - `references/candidate-mode.md`: raw request를 candidate로 나누고 Framing/Shaping 대상으로 삼을 후보를 고를 때.
+- `references/candidate-lifecycle.md`: Framing/Shaping 중 새 candidate, not-now, dropped 후보가 생길 때.
 - `references/scope-filter.md`: 후보 기능을 이번 package에 넣을지 자를 때.
 - `references/framing-checklist.md`: 문제, baseline, outcome, appetite가 흐릿할 때.
 - `references/shaping-checklist.md`: solution boundary, breadboard, material unknown이 흐릿할 때.
@@ -78,6 +79,8 @@ If Shape Up clearly does not fit, stop and suggest a lighter flow. If unclear, c
 Read `references/candidate-mode.md` before Framing when the request is broad, mixed, revived from parking lot, or could be bugfix/cleanup/spike/dependency work.
 
 Candidate Sorting does not solve the uncertainty. It chooses which candidate deserves Framing/Shaping.
+
+Read `references/candidate-lifecycle.md` when Framing or Shaping reveals a different candidate, a follow-up candidate, a not-now candidate, or a candidate that should be dropped.
 
 Separate:
 
