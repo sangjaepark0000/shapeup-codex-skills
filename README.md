@@ -19,13 +19,10 @@ AI agent로 제품을 만들 때 자주 터지는 실패가 있습니다.
 
 ## Quickstart
 
-Copy the skill folders into your Codex skills directory:
+Install the skills:
 
 ```powershell
-$skillsHome = if ($env:CODEX_HOME) { "$env:CODEX_HOME\skills" } else { "$env:USERPROFILE\.codex\skills" }
-Copy-Item -Recurse -Force .\skills\setup-shapeup "$skillsHome\setup-shapeup"
-Copy-Item -Recurse -Force .\skills\shaping "$skillsHome\shaping"
-Copy-Item -Recurse -Force .\skills\building "$skillsHome\building"
+.\install.ps1
 ```
 
 Then run these in Codex:
@@ -34,6 +31,29 @@ Then run these in Codex:
 setup-shapeup으로 이 repo의 shapeup 작업 공간을 세팅해줘.
 이 기능을 Shape Up으로 shaping해서 package까지 만들어줘.
 package 승인했으니 building 시작해줘.
+```
+
+Manual install still works:
+
+```powershell
+$skillsHome = if ($env:CODEX_HOME) { "$env:CODEX_HOME\skills" } else { "$env:USERPROFILE\.codex\skills" }
+Copy-Item -Recurse -Force .\skills\setup-shapeup "$skillsHome\setup-shapeup"
+Copy-Item -Recurse -Force .\skills\shaping "$skillsHome\shaping"
+Copy-Item -Recurse -Force .\skills\building "$skillsHome\building"
+```
+
+## English Quickstart
+
+```powershell
+.\install.ps1
+```
+
+Then ask Codex:
+
+```text
+Set up this repo for the Shape Up Codex skills.
+Shape this feature into a package before building.
+The package is approved. Start building from it.
 ```
 
 ## Skills
@@ -77,6 +97,8 @@ Build 전에 candidate를 좁힙니다.
 
 See `examples/001-product-signal/` for a small shaped package.
 
+See `examples/000-not-shapeup/` for a request that should use a lighter bugfix flow instead of Shape Up.
+
 ## Validate
 
 ```powershell
@@ -91,5 +113,7 @@ This repository intentionally includes portable skill files and examples:
 - `skills/*/agents/openai.yaml`
 - `skills/*/references/*.md`
 - `examples/*`
+- `install.ps1`
+- `.github/workflows/validate.yml`
 
 Codex app logs, sessions, auth files, caches, SQLite databases, and local project documents are not part of this repository.
