@@ -27,6 +27,16 @@ Get-ChildItem $skillsDir -Directory | ForEach-Object {
   if (-not (Test-Path $agentFile)) {
     $errors.Add("$skillName is missing agents/openai.yaml")
   }
+
+  $referenceMatches = [regex]::Matches($content, '`(references/[^`]+)`')
+  foreach ($match in $referenceMatches) {
+    $relativeReference = $match.Groups[1].Value -replace '/', [IO.Path]::DirectorySeparatorChar
+    $referencePath = Join-Path $skillDir $relativeReference
+
+    if (-not (Test-Path $referencePath)) {
+      $errors.Add("$skillName references missing file: $($match.Groups[1].Value)")
+    }
+  }
 }
 
 if ($errors.Count -gt 0) {
