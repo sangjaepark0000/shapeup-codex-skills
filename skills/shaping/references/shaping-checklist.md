@@ -26,7 +26,9 @@ Breadboard와 Fat Marker Sketch는 같은 목적을 가진 서로 다른 shaping
 
 텍스트 Breadboard는 페이지 흐름보다 요소와 관계를 적는다. 기본 출력은 bullet list가 아니라, places, affordances, connections가 한 화면에서 보이는 compact text board다.
 
-- `[Place]`: 화면, 모달, 메뉴, 상태, artifact처럼 사용자가 도달하는 곳.
+한국어 place 이름은 자연스러운 명사로 쓴다. `후보 비교면`, `판단 해석면`, `탐색 소스면`처럼 `place/surface`를 `-면` 접미사로 표시하지 않는다. 실제 페이지나 화면이면 `상품 상세 페이지`, `후보 비교`처럼 자연스럽게 쓰고, 페이지가 아닌 상태나 artifact를 구분해야 하면 `_판단 해석`, `_탐색 소스`, `_다음 탐색 세팅`처럼 `_`를 붙인다.
+
+- `[Place]`: 화면, 모달, 메뉴, 상태, artifact처럼 사용자가 도달하는 곳. 페이지가 아닌 상태/artifact는 필요하면 `_상태명`으로 표시한다.
 - `(Affordance)`: 버튼, 입력, 링크, 명령, prompt, 문구처럼 사용자가 읽거나 조작하는 것.
 - `->`: 어떤 행동이 어떤 상태, 장소, artifact, decision으로 이어지는가.
 

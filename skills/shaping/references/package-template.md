@@ -2,7 +2,7 @@
 
 Use this when writing `03-package.md`. Keep it rough, solved, and bounded.
 
-The Breadboard section should be a compact text board, not separate bullet lists. Keep it at the solution-shape level. Name product concepts, user actions, states, artifacts, and transitions; do not name tasks, files, database tables, UI layout, or implementation steps.
+The Breadboard section should be a compact text board, not separate bullet lists. Keep it at the solution-shape level. Name product concepts, user actions, states, artifacts, and transitions; do not name tasks, files, database tables, UI layout, or implementation steps. In Korean output, do not add awkward `-면` suffixes to place names. Use natural page names for actual pages, and prefix non-page states or artifacts with `_` when the distinction helps, for example `_판단 해석`, `_탐색 소스`, or `_다음 탐색 세팅`.
 
 `````md
 # Package: [Project Name]
@@ -36,11 +36,11 @@ Circuit breaker:
 ## Breadboard
 
 ```text
-[Place name]
+[Page name or _state/artifact name]
   (Affordance) -> [State, artifact, decision, or next place]
   (Affordance) -> [State, artifact, decision, or next place]
 
-[Another place]
+[Another page or _state]
   (Affordance) -> [State, artifact, decision, or next place]
 ```
 

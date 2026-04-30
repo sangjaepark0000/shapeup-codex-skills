@@ -19,15 +19,17 @@ A Breadboard is the shaped solution's conceptual map: where the user can be, wha
 
 Write the Breadboard as a compact text board by default, not as three separate bullet lists. Use brackets for places, parentheses for affordances, and arrows for connections. Add a short legend only when the board would be hard to read without it.
 
+In Korean output, do not mechanically translate `place` or `surface` into labels ending with `면`. Names like `후보 비교면`, `판단 해석면`, or `탐색 소스면` sound unnatural. If the place is an actual page or screen, use the natural page name, with or without `페이지` when that helps. If it is not a page and is really a state, artifact, or mode, prefix it with `_` when a marker would improve readability: `_탐색 영역 후보`, `_판단 해석`, `_구분 기록`, `_다음 탐색 세팅`.
+
 ````md
 ## Breadboard
 
 ```text
-[Place name]
+[Page name or _state/artifact name]
   (Affordance) -> [State, artifact, decision, or next place]
   (Affordance) -> [State, artifact, decision, or next place]
 
-[Another place]
+[Another page or _state]
   (Affordance) -> [State, artifact, decision, or next place]
 ```
 
@@ -41,6 +43,8 @@ Legend, only if needed:
 
 Places are screens, modals, menus, states, artifacts, or conceptual locations the user reaches. A place is not necessarily a full page. It can be a state or artifact the user meaningfully encounters.
 
+Name places in the user's language as ordinary nouns. Do not add a suffix just to signal that it is a place. Use `_` as a lightweight prefix for non-page states or artifacts when the distinction matters.
+
 Good place names:
 
 - Product detail
@@ -48,6 +52,11 @@ Good place names:
 - Draft package
 - Review state
 - Carry-forward notes
+- 상품 상세 페이지
+- 후보 비교
+- _판단 해석
+- _탐색 소스
+- _다음 탐색 세팅
 
 Avoid:
 
@@ -56,6 +65,11 @@ Avoid:
 - API route
 - CSS layout region
 - Task list item
+- 후보 비교면
+- 판단 해석면
+- 탐색 소스면
+- 모든 항목에 기계적으로 `페이지` 붙이기
+- 모든 상태를 화면처럼 부르기
 
 ## Affordances
 
@@ -92,6 +106,24 @@ Good connection shape:
 
 [Package review]
   (Approve package) -> [Build ready]
+```
+
+Good Korean connection shape:
+
+```text
+[탐색 세션 시작]
+  (탐색 목적 말하기) -> [_탐색 소스] -> [후보 비교]
+  (탐색할 것 찾기) -> [_탐색 영역 후보]
+
+[후보 비교]
+  (더 낫다/나쁘다 말하기) -> [_판단 해석]
+  (같음/다름 짚기) -> [_판단 해상도 높이기]
+
+[_판단 해석]
+  (해석 수정하기) -> [_구분 기록] -> [Taste brief]
+
+[Taste brief]
+  (다음 탐색 모드 선택하기) -> [_다음 탐색 세팅]
 ```
 
 Avoid connections that only describe implementation order:
