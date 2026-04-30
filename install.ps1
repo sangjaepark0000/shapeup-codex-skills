@@ -30,7 +30,8 @@ foreach ($skillName in $Skill) {
   }
 
   if ($PSCmdlet.ShouldProcess($installPath, "Install $skillName")) {
-    Copy-Item -Recurse -Force $source $installPath
+    New-Item -ItemType Directory -Force -Path $installPath | Out-Null
+    Copy-Item -Recurse -Force (Join-Path $source "*") $installPath
     Write-Host "Installed $skillName -> $installPath"
   }
 }
