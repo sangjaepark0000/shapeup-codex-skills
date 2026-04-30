@@ -25,6 +25,9 @@ Success check:
 Feedback loop:
 -
 
+Rabbit hole proof:
+-
+
 Current unknown:
 -
 ```
@@ -36,5 +39,6 @@ Current unknown:
 - Prefer the most unknown scope early.
 - Aim for `Wired but Ugly` before polish.
 - Pick the smallest trustworthy feedback loop for this slice.
+- If the package assigns a rabbit hole to this slice, prove that assumption before widening scope.
 - If the contract conflicts with the package, stop and return to shaping/package.
 - Record the contract in `06-build-log.md`.

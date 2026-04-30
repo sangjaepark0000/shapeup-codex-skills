@@ -39,8 +39,8 @@ Connections:
 
 ## Rabbit Holes
 
-| Risk | Assumption | Smallest Proof | Handling |
-|---|---|---|---|
+| Risk | Assumption | Smallest Proof | Result | Handling |
+|---|---|---|---|---|
 
 ## First Slice Hint
 

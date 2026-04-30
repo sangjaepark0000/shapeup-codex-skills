@@ -51,10 +51,10 @@ Connections:
 
 ## Rabbit Holes
 
-| Risk | Assumption | Smallest Proof | Handling |
-|---|---|---|---|
-| Duplicate signals | One user/product signal can be represented without creating a broader account model. | Toggle persistence behavior test or local storage harness. | Solve in first slice. |
-| Marketplace creep | Aggregate interest is useful without chat, offers, or seller identity. | Browser smoke check of product detail flow. | Bound out of package. |
+| Risk | Assumption | Smallest Proof | Result | Handling |
+|---|---|---|---|---|
+| Duplicate signals | One user/product signal can be represented without creating a broader account model. | Toggle persistence behavior test or local storage harness. | Assigned to first slice proof. | Solve in first slice. |
+| Marketplace creep | Aggregate interest is useful without chat, offers, or seller identity. | Product flow walkthrough. | Boundary accepted: aggregate-only display. | Bound out of package. |
 
 ## First Slice Hint
 

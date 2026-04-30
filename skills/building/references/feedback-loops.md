@@ -26,6 +26,8 @@ Decision: solve / cut / bound / spike
 
 If no trustworthy proof loop is possible inside the appetite, stop and return to shaping instead of guessing.
 
+Do not widen the slice until the rabbit hole proof has a result or the scope is cut/bounded.
+
 ## TDD Style
 
 Use a red-green loop when the behavior is important and testable through a public interface.
