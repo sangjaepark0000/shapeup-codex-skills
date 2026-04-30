@@ -5,7 +5,7 @@ Source of Truth: ./03-package.md
 
 ## Checkpoints
 
-- Candidate: Let users signal interest in a product without creating a marketplace flow.
+- Candidate sorting: Select product interest signal; exclude marketplace flow.
 - Frame checkpoint: The current workaround is scattered messages and no aggregate signal.
 - Shape checkpoint: Product detail signal and aggregate count are enough for the first bet.
 - Package Approved:

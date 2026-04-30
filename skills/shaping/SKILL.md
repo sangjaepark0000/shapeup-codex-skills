@@ -34,7 +34,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 
 - `references/workspace.md`: 시작 프로토콜, 파일 구조, project workspace를 정할 때.
 - `references/fit-check.md`: Shape Up을 쓰지 말아야 할지 빠르게 판단할 때.
-- `references/candidate-mode.md`: 큰 제품 영역과 첫 package 후보를 구분할 때.
+- `references/candidate-mode.md`: raw request를 candidate로 나누고 Framing/Shaping 대상으로 삼을 후보를 고를 때.
 - `references/scope-filter.md`: 후보 기능을 이번 package에 넣을지 자를 때.
 - `references/framing-checklist.md`: 문제, baseline, outcome, appetite가 흐릿할 때.
 - `references/shaping-checklist.md`: solution boundary, breadboard, material unknown이 흐릿할 때.
@@ -46,7 +46,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 
 1. Read workspace context.
 2. Run a quiet fit check.
-3. Clarify candidate and mode when the request is larger than a small feature.
+3. Sort the raw request into one or more candidates and choose what to frame.
 4. Apply the scope filter before extra features enter the package.
 5. Move between framing and shaping as needed until problem, appetite, and solution boundary are coherent.
 6. Summarize the current frame/shape before packaging.
@@ -73,16 +73,20 @@ Read `references/fit-check.md` only when the request looks like it may be urgent
 
 If Shape Up clearly does not fit, stop and suggest a lighter flow. If unclear, continue and reassess during Framing.
 
-## Candidate And Mode
+## Candidate Sorting
 
-For large product ideas, read `references/candidate-mode.md` before Framing. Separate:
+Read `references/candidate-mode.md` before Framing when the request is broad, mixed, revived from parking lot, or could be bugfix/cleanup/spike/dependency work.
+
+Candidate Sorting does not solve the uncertainty. It chooses which candidate deserves Framing/Shaping.
+
+Separate:
 
 - Long-term product area
 - First package candidate
 - Follow-up candidates
 - Parking lot candidates
 
-For a narrow feature request, skip this step and enter Framing.
+For a narrow feature request, keep this step lightweight: name the candidate in one sentence and enter Framing.
 
 ## Scope Filter
 

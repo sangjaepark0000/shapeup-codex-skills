@@ -60,7 +60,7 @@ Source of Truth: ./03-package.md
 
 ## Checkpoints
 
-- Candidate:
+- Candidate sorting:
 - Frame checkpoint:
 - Shape checkpoint:
 - Package Approved:
