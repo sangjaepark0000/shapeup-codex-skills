@@ -6,8 +6,8 @@ Source of Truth: ./03-package.md
 ## Checkpoints
 
 - Candidate: Let users signal interest in a product without creating a marketplace flow.
-- Frame Go: Yes - the current workaround is scattered messages and no aggregate signal.
-- Shape Go: Yes - product detail signal and aggregate count are enough for the first bet.
+- Frame checkpoint: The current workaround is scattered messages and no aggregate signal.
+- Shape checkpoint: Product detail signal and aggregate count are enough for the first bet.
 - Package Approved:
 
 ## Current Summary

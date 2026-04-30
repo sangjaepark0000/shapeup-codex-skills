@@ -60,59 +60,12 @@ shapeup/
 
 ## Templates
 
-`shapeup/product-memory.md`:
+필요할 때만 다음 reference를 읽어 파일을 만든다.
 
-```md
-# Product Memory
-
-## Vision
-
-## Strategy
-
-## Pressures
-
-## Core Objects
-
-## Durable Decisions
-
-## Repeated No-Go
-```
-
-`shapeup/parking-lot.md`:
-
-```md
-# Parking Lot
-
-Parking lot은 backlog가 아니다. 다시 중요해졌을 때 새 맥락과 함께 candidate로 되살릴 후보만 둔다.
-
-## Candidates
-
-| Candidate | Why It Might Return | Last Context |
-|---|---|---|
-```
-
-`shapeup/project-index.md`:
-
-```md
-# Project Index
-
-| Project | Status | Source of Truth | Notes |
-|---|---|---|---|
-```
-
-`shapeup/notes/operating-model.md`:
-
-```md
-# Shape Up Operating Model
-
-## Default Appetite
-
-## Release Target
-
-## Verification Default
-
-## Local Conventions
-```
+- `references/product-memory-template.md`
+- `references/parking-lot-template.md`
+- `references/project-index-template.md`
+- `references/operating-model-template.md`
 
 ## 4. Done
 

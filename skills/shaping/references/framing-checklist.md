@@ -13,9 +13,11 @@ Ask questions one at a time. Do not dump the whole checklist into the chat.
 - Success criteria: how will we know it improved?
 - Appetite: what time and scope boundary should shape the solution?
 
-## Frame Go
+## Framing Checkpoint
 
-Say `Frame Go` only when:
+Use this as a lightweight checkpoint, not a ceremony. It is fine to move into shaping and come back if the solution work exposes a weak frame.
+
+The frame is probably strong enough when:
 
 - The need is explainable in one or two sentences.
 - The current alternative is visible.
@@ -27,7 +29,7 @@ Say `Frame Go` only when:
 - The original feature request has been narrowed to the actual breaking point.
 - Appetite acts as a constraint on the solution.
 
-`Frame Go` means this problem is worth shaping. It is not build approval and not solution approval.
+This checkpoint means the problem is clear enough to shape. It is not build approval and not solution approval.
 
 ## Return To Framing
 

@@ -35,6 +35,6 @@ Connections:
 | Privacy ambiguity | Show aggregate counts only. |
 | Feature creep into marketplace | Name excluded workflows in the package. |
 
-## Shape Go
+## Shape Checkpoint
 
 The shape is narrow enough to build as one vertical slice. Remaining questions are implementation details.

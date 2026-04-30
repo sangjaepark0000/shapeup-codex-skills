@@ -4,7 +4,8 @@ Use this before building.
 
 ## Required
 
-- Approved package path.
+- Package path.
+- Explicit approval signal.
 - Why.
 - Desired outcome.
 - Appetite.
@@ -14,7 +15,15 @@ Use this before building.
 - Build rules.
 - Build context, or enough package context to infer it safely.
 
-If any of these are missing and the missing information affects `why/what/scope`, stop and return to shaping or package review.
+Approval can come from:
+
+- The user's current message explicitly says to build from or approve the package.
+- `project.md` has a filled `Package Approved` checkpoint.
+- The package contains an approval marker used by the repo.
+
+If approval is missing, stop and ask for approval or return to package review.
+
+If any package content is missing and the missing information affects `why/what/scope`, stop and return to shaping or package review.
 
 ## Read Context
 

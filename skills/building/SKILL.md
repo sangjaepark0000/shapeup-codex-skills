@@ -16,8 +16,9 @@ description: 사용자가 승인된 Shape Up package를 기반으로 build를 �
 ## Input Rules
 
 - 승인된 package가 있어야 한다.
-- 사용자가 package 파일 경로를 주고 build를 요청하면 승인된 것으로 간주한다.
-- package가 없거나 승인 여부가 불명확하면 build를 시작하지 말고 shaping 또는 package review로 되돌린다.
+- 사용자가 package 파일 경로만 주면 승인으로 간주하지 않는다.
+- build를 시작하려면 사용자의 명시 승인, `project.md`의 `Package Approved`, 또는 package 안의 approval marker 중 하나가 있어야 한다.
+- package가 없거나 승인 여부가 불명확하면 build를 시작하지 말고 package approval 확인 또는 package review로 되돌린다.
 - 새 세션은 package 경로만으로 build kickoff 맥락을 복원할 수 있어야 한다.
 
 ## Core Rules
@@ -64,7 +65,7 @@ description: 사용자가 승인된 Shape Up package를 기반으로 build를 �
 11. Hammer scope or continue with the next slice.
 12. Verify `Built`.
 13. Record `Release` when there is an access path.
-14. Close only when requested or clearly appropriate.
+14. Close only when the user explicitly asks to close.
 
 ## Start
 
@@ -169,7 +170,9 @@ Update `project.md` to `Status: Released` when present.
 
 Read `references/retro-template.md` when closing.
 
-Close only after:
+Close only when the user explicitly asks to close. Closing changes product memory, parking lot, project index, and possibly project location.
+
+Close after:
 
 - Retro is written.
 - `project.md` is `Closed`.

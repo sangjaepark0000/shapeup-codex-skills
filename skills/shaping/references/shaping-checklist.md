@@ -45,9 +45,11 @@ Good:
 - Risks are handled by solving, cutting, or marking out-of-bounds.
 - Build questions are mostly `how`.
 
-## Shape Go
+## Shaping Checkpoint
 
-Say `Shape Go` only when:
+Use this as a lightweight checkpoint before packaging. It is fine to return to framing if packaging exposes a weak problem, baseline, or appetite.
+
+The shape is probably strong enough when:
 
 - The rough result is visible.
 - There is a core flow.
@@ -59,9 +61,9 @@ Say `Shape Go` only when:
 - Rabbit holes are solved, cut, or out-of-bounds.
 - Material unknowns are not being thrown into build.
 
-`Shape Go` means a package can be written. It is not build approval.
+This checkpoint means a package can be written. It is not build approval.
 
-## No Shape Go
+## Do Not Package Yet
 
 Do not package when:
 

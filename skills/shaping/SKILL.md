@@ -20,7 +20,8 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - Markdown을 source of truth로 둔다.
 - 산출물은 project workspace 안에 묶는다.
 - build 전에 결과물이 `rough`, `solved`, `bounded`인지 확인한다.
-- `Frame Go`와 `Shape Go` 전에는 package를 쓰지 않는다.
+- Framing과 Shaping은 엄격한 phase가 아니라 현재 불확실성이 어디에 있는지 구분하기 위한 작업 모드다.
+- package를 쓰기 전에는 문제, appetite, solution boundary가 대충이라도 닫혀 있어야 한다.
 - `Package Approved` 전에는 build를 시작하지 않는다.
 - problem, baseline, desired outcome, appetite가 흔들리면 Framing으로 되돌아간다.
 - build 중 `왜/무엇` 질문이 다시 나오면 framing 또는 shaping으로 되돌린다.
@@ -35,8 +36,8 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - `references/fit-check.md`: Shape Up을 쓰지 말아야 할지 빠르게 판단할 때.
 - `references/candidate-mode.md`: 큰 제품 영역과 첫 package 후보를 구분할 때.
 - `references/scope-filter.md`: 후보 기능을 이번 package에 넣을지 자를 때.
-- `references/framing-checklist.md`: Framing 질문과 `Frame Go` 기준이 필요할 때.
-- `references/shaping-checklist.md`: Shaping 질문, breadboard, `Shape Go` 기준이 필요할 때.
+- `references/framing-checklist.md`: 문제, baseline, outcome, appetite가 흐릿할 때.
+- `references/shaping-checklist.md`: solution boundary, breadboard, material unknown이 흐릿할 때.
 - `references/package-template.md`: `03-package.md`를 작성할 때.
 - `references/betting-questions.md`: `Package Approved` 전에 gate를 확인할 때.
 
@@ -46,8 +47,8 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 2. Run a quiet fit check.
 3. Clarify candidate and mode when the request is larger than a small feature.
 4. Apply the scope filter before extra features enter the package.
-5. Frame until `Frame Go`.
-6. Shape until `Shape Go`.
+5. Move between framing and shaping as needed until problem, appetite, and solution boundary are coherent.
+6. Summarize the current frame/shape before packaging.
 7. Write the package.
 8. Ask for explicit `Package Approved`.
 9. Stop before build unless the user separately asks to build from the approved package.
@@ -101,7 +102,7 @@ Read `references/framing-checklist.md` while closing:
 - Success criteria
 - Appetite
 
-When enough is known, summarize `Frame Go`. This means shaping is worth doing; it is not build approval.
+When enough is known, summarize the frame and move into shaping. Do not treat this as a heavy gate; it is just a checkpoint that can be revisited.
 
 ## Shaping
 
@@ -116,7 +117,7 @@ Read `references/shaping-checklist.md` while closing:
 - Material unknowns
 - Appropriate abstraction level
 
-When enough is known, summarize `Shape Go`. This means a package can be written; it is not build approval.
+When enough is known, summarize the shaped boundary and write the package. Do not treat this as irreversible; if packaging reveals a weak problem or boundary, move back.
 
 ## Package
 
@@ -130,7 +131,7 @@ The package should let a new Codex session start the first vertical slice using 
 
 Read `references/betting-questions.md`.
 
-`Package Approved` must be explicit. A lack of objection may be enough for `Frame Go` or `Shape Go`, but not for build approval.
+`Package Approved` must be explicit. Framing and shaping checkpoints can be lightweight, but build approval cannot be implied.
 
 Accept signals like:
 
@@ -146,7 +147,7 @@ After approval, update `project.md` if present. Do not start build unless the us
 When package writing is done, tell the user:
 
 - Package file path
-- Decisions closed during shaping
+- Decisions closed or intentionally left flexible during shaping
 - Remaining pre-build checks, if any
 - Current `project.md` status
 
