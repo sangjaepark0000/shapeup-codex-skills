@@ -7,10 +7,24 @@ This borrows the useful parts of `tdd` and `diagnose` without making every Shape
 ## Pick The Smallest Trustworthy Loop
 
 - Risky behavior or business rule: prefer a behavior test before or alongside implementation.
+- Rabbit hole proof: prove the smallest assumption before widening the slice.
 - Regression or bug-like work: build a diagnosis loop first, then lock the fix with a regression check.
 - UI interaction: use browser smoke verification or an e2e check when available.
 - Simple wiring or low-risk UI: manual verification can be enough.
 - Non-deterministic bug: raise reproduction rate before fixing.
+
+## Rabbit Hole Proof
+
+Use this when a package marks a rabbit hole as `solve` or when build discovers one.
+
+```md
+Assumption:
+Smallest proof:
+Result:
+Decision: solve / cut / bound / spike
+```
+
+If no trustworthy proof loop is possible inside the appetite, stop and return to shaping instead of guessing.
 
 ## TDD Style
 

@@ -37,6 +37,11 @@ Connections:
 | Risk | Handling |
 |---|---|
 
+## Rabbit Holes
+
+| Risk | Assumption | Smallest Proof | Handling |
+|---|---|---|---|
+
 ## First Slice Hint
 
 ## Build Rules
@@ -66,6 +71,7 @@ Connections:
 - Existing patterns:
 - Likely touched modules:
 - Integration risks:
-- Rabbit holes:
+- Architecture friction:
+- Interface/test surface risks:
 - Smallest viable implementation path:
 ```

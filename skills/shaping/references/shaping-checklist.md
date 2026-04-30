@@ -51,6 +51,32 @@ Good:
 - Risks are handled by solving, cutting, or marking out-of-bounds.
 - Build questions are mostly `how`.
 
+## Rabbit Hole Check
+
+A rabbit hole is a risk that can consume the appetite because a key assumption is still unproven.
+
+For each rabbit hole, identify:
+
+- Assumption: what must be true?
+- Smallest proof: test, harness, fixture, browser check, code inspection, or spike.
+- Handling: solve, cut, bound, or spike.
+
+Handling options:
+
+- `Solve`: prove it before package approval or in the first slice.
+- `Cut`: remove the scope that creates it.
+- `Bound`: keep it explicitly out of the package.
+- `Spike`: stop shaping and learn first.
+
+Architecture-flavored rabbit holes:
+
+- Existing module is shallow and will spread complexity across callers.
+- No clear interface or test surface exists.
+- A new seam would be fake indirection with only one adapter.
+- Shared surface changes create integration risk.
+
+Do not pass a rabbit hole to build as "figure it out later". Either prove it, cut it, bound it, or stop for a spike.
+
 ## Shaping Checkpoint
 
 Use this as a lightweight checkpoint before packaging. It is fine to return to framing if packaging exposes a weak problem, baseline, or appetite.

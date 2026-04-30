@@ -49,6 +49,13 @@ Connections:
 | Privacy confusion | Show aggregate count only. |
 | Marketplace creep | Keep excluded workflows visible in the package and build log. |
 
+## Rabbit Holes
+
+| Risk | Assumption | Smallest Proof | Handling |
+|---|---|---|---|
+| Duplicate signals | One user/product signal can be represented without creating a broader account model. | Toggle persistence behavior test or local storage harness. | Solve in first slice. |
+| Marketplace creep | Aggregate interest is useful without chat, offers, or seller identity. | Browser smoke check of product detail flow. | Bound out of package. |
+
 ## First Slice Hint
 
 Start with one product detail page where a user can toggle interest and see the count change.
@@ -84,5 +91,6 @@ Start with one product detail page where a user can toggle interest and see the 
 - Existing patterns:
 - Likely touched modules:
 - Integration risks:
-- Rabbit holes:
+- Architecture friction:
+- Interface/test surface risks:
 - Smallest viable implementation path:
