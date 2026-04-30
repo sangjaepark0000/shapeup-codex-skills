@@ -2,7 +2,7 @@
 
 Use this when writing `03-package.md`. Keep it rough, solved, and bounded.
 
-The Breadboard section must keep the exact `Places`, `Affordances`, and `Connections` structure. Keep it at the solution-shape level. Name product concepts, user actions, states, artifacts, and transitions; do not name tasks, files, database tables, UI layout, or implementation steps.
+The Breadboard section should be a compact text board, not separate bullet lists. Keep it at the solution-shape level. Name product concepts, user actions, states, artifacts, and transitions; do not name tasks, files, database tables, UI layout, or implementation steps.
 
 `````md
 # Package: [Project Name]
@@ -35,14 +35,19 @@ Circuit breaker:
 
 ## Breadboard
 
-Places:
-- [Place name]: [what the user reaches, sees, edits, compares, or reviews here]
+```text
+[Place name]
+  (Affordance) -> [State, artifact, decision, or next place]
+  (Affordance) -> [State, artifact, decision, or next place]
 
-Affordances:
-- [Affordance name]: [what the user can read, enter, click, choose, correct, compare, approve, or reject]
+[Another place]
+  (Affordance) -> [State, artifact, decision, or next place]
+```
 
-Connections:
-- [Place or action] -> [next place, state, artifact, or decision]: [why this connection matters]
+Optional legend, only if the board is hard to read:
+- `[Place]`: what the user reaches, sees, edits, compares, or reviews.
+- `(Affordance)`: what the user can read, enter, click, choose, correct, compare, approve, or reject.
+- `->`: why the action moves the system to the next state, artifact, or decision.
 
 ## Fat Marker Sketch
 

@@ -24,11 +24,16 @@ When asking a shaping question:
 
 Breadboard와 Fat Marker Sketch는 같은 목적을 가진 서로 다른 shaping 도구다. 둘 다 build 전 불확실성을 줄이되, 너무 구체적이지도 너무 추상적이지도 않게 만든다. `02-shape.md`나 `03-package.md`에서 둘 중 하나를 쓰거나 함께 쓸 때는 `references/breadboard.md`를 읽는다.
 
-텍스트 Breadboard는 페이지 흐름보다 요소와 관계를 적는다.
+텍스트 Breadboard는 페이지 흐름보다 요소와 관계를 적는다. 기본 출력은 bullet list가 아니라, places, affordances, connections가 한 화면에서 보이는 compact text board다.
 
-- Places / 장소: 화면, 모달, 메뉴, 상태, artifact처럼 사용자가 도달하는 곳.
-- Affordances / 행동 가능 요소: 버튼, 입력, 링크, 명령, prompt, 문구처럼 사용자가 읽거나 조작하는 것.
-- Connections / 연결: 어떤 행동이 어떤 상태, 장소, artifact, decision으로 이어지는가.
+- `[Place]`: 화면, 모달, 메뉴, 상태, artifact처럼 사용자가 도달하는 곳.
+- `(Affordance)`: 버튼, 입력, 링크, 명령, prompt, 문구처럼 사용자가 읽거나 조작하는 것.
+- `->`: 어떤 행동이 어떤 상태, 장소, artifact, decision으로 이어지는가.
+
+```text
+[Place]
+  (Affordance) -> [State or artifact]
+```
 
 Fat Marker Sketch는 보이는 표면, rough arrangement, grouping, emphasis가 solution의 중요한 부분일 때 쓴다. Breadboard의 대체재로만 취급하지 않는다. Breadboard와 나란히 둘 수 있고, 시나리오 안에서 중요한 여러 순간의 rough visible surface를 그릴 수 있다. 흐름도나 logic diagram이 아니며, package 수신자가 핵심 형태를 볼 수 있게 하는 용도다.
 
@@ -117,7 +122,7 @@ The shape is probably strong enough when:
 
 - The rough result is visible.
 - There is a core flow.
-- The Breadboard has `Places`, `Affordances`, and `Connections`.
+- The Breadboard shows places, affordances, and connections in a compact text board.
 - If the shape is hard to picture, a Fat Marker Sketch shows the important scenario moments as rough surfaces, not as a pure flow diagram.
 - Not doing is explicit.
 - Risks are visible.

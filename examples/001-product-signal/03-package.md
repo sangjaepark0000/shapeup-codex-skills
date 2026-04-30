@@ -36,18 +36,12 @@ Circuit breaker:
 
 ## Breadboard
 
-Places:
-- Product detail page
-
-Affordances:
-- Interest toggle
-- Interest count
-- Empty count state
-
-Connections:
-- Product detail -> interest toggle -> saved user/product signal
-- Saved signal -> aggregate count
-- Toggle again -> remove signal -> aggregate count updates
+```text
+[Product detail page]
+  (Interest toggle) -> [Saved user/product signal] -> [Aggregate count]
+  (Interest toggle again) -> [Signal removed] -> [Aggregate count]
+  (Empty count state) -> [Interest action remains available]
+```
 
 ## Not Doing
 

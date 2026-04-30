@@ -135,7 +135,7 @@ Read `references/shaping-checklist.md` while closing:
 
 When enough is known, summarize the shaped boundary and write the package. Do not treat this as irreversible; if packaging reveals a weak problem or boundary, move back.
 
-Use the Breadboard format from `references/breadboard.md` in `02-shape.md`: `Places`, `Affordances`, and `Connections`. Record the summary as `Shape Go` when the shape is rough, solved, and bounded enough to package.
+Use the Breadboard format from `references/breadboard.md` in `02-shape.md`: a compact text board with places, affordances, and connections. Record the summary as `Shape Go` when the shape is rough, solved, and bounded enough to package.
 
 ## Package
 

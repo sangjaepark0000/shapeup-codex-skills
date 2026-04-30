@@ -6,19 +6,12 @@ The product detail page gains a single interest action and an aggregate count.
 
 ## Breadboard
 
-Places:
-- Product detail page
-
-Affordances:
-- Interest toggle
-- Interest count
-- Empty count state
-
-Connections:
-- User opens product detail.
-- User toggles interest.
-- Product count updates.
-- User can untoggle interest.
+```text
+[Product detail page]
+  (Interest toggle) -> [Saved user/product signal] -> [Interest count updates]
+  (Interest toggle again) -> [Signal removed] -> [Interest count updates]
+  (Empty count state) -> [User can still mark interest]
+```
 
 ## Not Doing
 

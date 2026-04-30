@@ -15,20 +15,27 @@ Do not treat Fat Marker Sketch as a fallback only after Breadboard fails. If the
 
 ## Breadboard Shape
 
-A Breadboard is the shaped solution's conceptual map: where the user can be, what they can do or understand there, and how those actions move the system forward. It is not a flowchart, task list, wireframe, or implementation plan.
+A Breadboard is the shaped solution's conceptual map: where the user can be, what they can do or understand there, and how those actions move the system forward. It is not a checklist, task list, wireframe, or implementation plan.
 
-```md
+Write the Breadboard as a compact text board by default, not as three separate bullet lists. Use brackets for places, parentheses for affordances, and arrows for connections. Add a short legend only when the board would be hard to read without it.
+
+````md
 ## Breadboard
 
-Places:
-- [Place name]: [what the user reaches, sees, edits, compares, or reviews here]
+```text
+[Place name]
+  (Affordance) -> [State, artifact, decision, or next place]
+  (Affordance) -> [State, artifact, decision, or next place]
 
-Affordances:
-- [Affordance name]: [what the user can read, enter, click, choose, correct, compare, approve, or reject]
-
-Connections:
-- [Place or action] -> [next place, state, artifact, or decision]: [why this connection matters]
+[Another place]
+  (Affordance) -> [State, artifact, decision, or next place]
 ```
+
+Legend, only if needed:
+- `[Place]`: what the user reaches, sees, edits, compares, or reviews.
+- `(Affordance)`: what the user can read, enter, click, choose, correct, compare, approve, or reject.
+- `->`: why the action moves the system to the next state, artifact, or decision.
+````
 
 ## Places
 
@@ -76,9 +83,16 @@ Connections describe transitions from a place or action to another place, state,
 
 Good connection shape:
 
-- Product detail / interest toggle -> saved signal: aggregate count updates while individual identity stays private.
-- Comparison tray / correct interpretation -> revised taste brief: Codex updates the working hypothesis.
-- Package review / approved -> build ready: project can move to the building skill.
+```text
+[Product detail]
+  (Interest toggle) -> [Saved signal] -> [Aggregate count]
+
+[Comparison tray]
+  (Correct interpretation) -> [Revised taste brief]
+
+[Package review]
+  (Approve package) -> [Build ready]
+```
 
 Avoid connections that only describe implementation order:
 
@@ -90,6 +104,8 @@ Avoid connections that only describe implementation order:
 
 - Keep it at the solution-shape level.
 - Name product concepts, user actions, states, artifacts, and transitions.
+- Prefer one readable text board over separate lists of places, affordances, and connections.
+- Use bullets only for a short legend or explanatory notes, not as the main Breadboard.
 - Do not replace it with a paragraph, checklist, implementation plan, or screen-by-screen wireframe.
 - Do not lock layout, styling, component boundaries, file paths, or task order.
 
