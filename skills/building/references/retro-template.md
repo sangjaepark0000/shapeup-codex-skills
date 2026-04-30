@@ -21,5 +21,7 @@ Only include items that should carry into future projects by default.
 
 Only include items that repeatedly appeared or explain the project boundary.
 
+Reconcile these with `shapeup/parking-lot.md` when closing: update existing rows instead of duplicating candidates, and treat repeated appearance as a pressure signal rather than priority.
+
 ## Follow-Up Candidates
 ```

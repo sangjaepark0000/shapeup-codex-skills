@@ -28,6 +28,8 @@ Record in `06-build-log.md` or `05-scope-map.md`:
 
 Do not promote package outside ideas directly to global parking lot. First classify them in `06-build-log.md`.
 
+This is still write-time reconciliation: classify the idea in the build log, and if it is a durable future candidate, reconcile it with `shapeup/parking-lot.md` in the same checkpoint.
+
 ## Stop And Return To Shaping
 
 Stop when build needs a change to:
@@ -61,3 +63,5 @@ Promote a build-time idea to `shapeup/parking-lot.md` only when it is likely to 
 Keep it in `06-build-log.md` only when it is useful local context but not a future candidate.
 
 Drop it when it is only a nice-to-have or implementation temptation.
+
+When the candidate already exists in `shapeup/parking-lot.md`, update `Signals`, `Last Seen`, and `Sources` instead of adding a duplicate. Repeated appearance is a pressure signal, not automatic priority.

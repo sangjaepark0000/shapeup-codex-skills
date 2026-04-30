@@ -20,5 +20,5 @@ Do not cut the package's core desired outcome. Cut secondary states, nice-to-hav
 
 - If it is not needed for the desired outcome, cut it.
 - If it opens a new product decision, do not build it.
-- If it is a recurring or boundary-relevant future candidate, record it in parking lot.
+- If it is a recurring or boundary-relevant future candidate, reconcile it with `shapeup/parking-lot.md`.
 - Otherwise record it only in the build log.

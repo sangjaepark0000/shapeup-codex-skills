@@ -44,10 +44,10 @@ Current unknown:
 
 ## Candidate Promotions
 
-Only promote ideas that may matter again, explain a boundary, or represent a distinct future bet.
+Only promote ideas that may matter again, explain a boundary, or represent a distinct future bet. Do not re-define candidates already classified earlier in the same project; record only the build event or pressure signal.
 
-| Candidate | Source | Why It Might Return | Destination |
-|---|---|---|---|
+| Candidate | Return Condition | Signal | Source | Destination |
+|---|---|---|---|---|
 
 ## Verification
 

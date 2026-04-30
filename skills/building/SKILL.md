@@ -184,7 +184,7 @@ Close after:
 - Retro is written.
 - `project.md` is `Closed`.
 - Durable product decisions are moved to `shapeup/product-memory.md`.
-- Only recurring or boundary-relevant candidates are moved to `shapeup/parking-lot.md`.
+- Only recurring or boundary-relevant candidates are reconciled with `shapeup/parking-lot.md`.
 - `shapeup/project-index.md` is updated.
 - Active project is moved to `shapeup/closed/` when using that structure.
 

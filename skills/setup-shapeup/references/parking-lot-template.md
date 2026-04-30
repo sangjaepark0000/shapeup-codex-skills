@@ -14,6 +14,6 @@ Parking lot은 backlog가 아니다. 다시 중요해졌을 때 새 맥락과 �
 
 ## Candidates
 
-| Candidate | Why It Might Return | Last Context | Source |
-|---|---|---|---|
+| Candidate | Return Condition | Signals | Last Seen | Sources | Status |
+|---|---|---|---|---|---|
 ```
