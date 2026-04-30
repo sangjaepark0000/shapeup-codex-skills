@@ -61,8 +61,8 @@ Source of Truth: ./03-package.md
 ## Checkpoints
 
 - Candidate sorting:
-- Frame checkpoint:
-- Shape checkpoint:
+- Frame Go:
+- Shape Go:
 - Package Approved:
 
 ## Current Summary

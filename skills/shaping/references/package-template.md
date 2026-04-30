@@ -2,7 +2,9 @@
 
 Use this when writing `03-package.md`. Keep it rough, solved, and bounded.
 
-```md
+The Breadboard section must keep the exact `Places`, `Affordances`, and `Connections` structure. Keep it at the solution-shape level. Name product concepts, user actions, states, artifacts, and transitions; do not name tasks, files, database tables, UI layout, or implementation steps.
+
+`````md
 # Package: [Project Name]
 
 ## Why
@@ -20,13 +22,31 @@ Codex execution budget:
 ## Breadboard
 
 Places:
--
+- [Place name]: [what the user reaches, sees, edits, compares, or reviews here]
 
 Affordances:
--
+- [Affordance name]: [what the user can read, enter, click, choose, correct, compare, approve, or reject]
 
 Connections:
--
+- [Place or action] -> [next place, state, artifact, or decision]: [why this connection matters]
+
+## Fat Marker Sketch
+
+Use when the visible surface, rough arrangement, grouping, or emphasis is important to understanding the shape. This can sit beside the Breadboard; it is not only a fallback. Sketch one or more important scenario moments as rough visible surfaces. Do not use this section as a flow diagram or polished wireframe.
+
+Scenario: [user situation being shaped]
+
+Moment 1: [what the user is looking at]
+
+```text
+[rough visible surface]
+```
+
+Moment 2: [what changes after the important action/state]
+
+```text
+[rough visible surface]
+```
 
 ## Not Doing
 
@@ -74,4 +94,4 @@ Connections:
 - Architecture friction:
 - Interface/test surface risks:
 - Smallest viable implementation path:
-```
+`````

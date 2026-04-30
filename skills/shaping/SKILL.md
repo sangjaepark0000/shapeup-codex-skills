@@ -12,6 +12,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - 사용자가 쓰는 언어를 그대로 따른다.
 - 사용자가 한국어로 요청하면 질문, 중간 설명, 산출물 문서를 한국어로 작성한다.
 - Shape Up, build, package, breadboard, appetite 같은 방법론 키워드는 필요하면 그대로 쓰되, 처음 등장할 때 한국어 설명을 붙인다.
+- 영어 template 문구를 사용자-facing 산출물에 그대로 출력하지 않는다.
 
 ## Core Rules
 
@@ -21,6 +22,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - 산출물은 project workspace 안에 묶는다.
 - build 전에 결과물이 `rough`, `solved`, `bounded`인지 확인한다.
 - Framing과 Shaping은 엄격한 phase가 아니라 현재 불확실성이 어디에 있는지 구분하기 위한 작업 모드다.
+- Framing이 충분하면 `Frame Go`, Shaping이 충분하면 `Shape Go`를 짧게 요약하고 `project.md`에 기록한다.
 - package를 쓰기 전에는 문제, appetite, solution boundary가 대충이라도 닫혀 있어야 한다.
 - `Package Approved` 전에는 build를 시작하지 않는다.
 - problem, baseline, desired outcome, appetite가 흔들리면 Framing으로 되돌아간다.
@@ -39,6 +41,7 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 - `references/scope-filter.md`: 후보 기능을 이번 package에 넣을지 자를 때.
 - `references/framing-checklist.md`: 문제, baseline, outcome, appetite가 흐릿할 때.
 - `references/shaping-checklist.md`: solution boundary, breadboard, material unknown이 흐릿할 때.
+- `references/breadboard.md`: `02-shape.md`나 `03-package.md`의 Breadboard 형식을 작성하거나 점검할 때.
 - `references/domain-decisions.md`: shaping 중 용어, product memory, ADR 후보가 생길 때.
 - `references/package-template.md`: `03-package.md`를 작성할 때.
 - `references/betting-questions.md`: `Package Approved` 전에 gate를 확인할 때.
@@ -48,12 +51,13 @@ Codex와 사용자가 build 전에 project를 준비하도록 돕는다. 목표�
 1. Read workspace context.
 2. Run a quiet fit check.
 3. Sort the raw request into one or more candidates and choose what to frame.
-4. Apply the scope filter before extra features enter the package.
-5. Move between framing and shaping as needed until problem, appetite, and solution boundary are coherent.
-6. Summarize the current frame/shape before packaging.
-7. Write the package.
-8. Ask for explicit `Package Approved`.
-9. Stop before build unless the user separately asks to build from the approved package.
+4. Reconcile candidates that are not selected for this package.
+5. Apply the scope filter before extra features enter the package.
+6. Move between framing and shaping as needed until problem, appetite, and solution boundary are coherent.
+7. Summarize `Frame Go` and `Shape Go` before packaging.
+8. Write the package.
+9. Ask for explicit `Package Approved`.
+10. Stop before build unless the user separately asks to build from the approved package.
 
 ## Start
 
@@ -91,6 +95,8 @@ Separate:
 
 For a narrow feature request, keep this step lightweight: name the candidate in one sentence and enter Framing.
 
+After candidate sorting, immediately reconcile candidates that are not selected. Do not leave durable future bets only inside local project notes.
+
 ## Scope Filter
 
 Read `references/scope-filter.md` whenever a candidate attracts "also", "while we are here", "later we need", or new user role/object/privacy/permission ideas.
@@ -112,6 +118,8 @@ Read `references/framing-checklist.md` while closing:
 
 When enough is known, summarize the frame and move into shaping. Do not treat this as a heavy gate; it is just a checkpoint that can be revisited.
 
+Record the summary as `Frame Go` when there is enough problem, baseline, desired outcome, success criteria, and appetite to spend shaping time.
+
 ## Shaping
 
 Shaping finds a buildable shape without locking implementation details.
@@ -126,6 +134,8 @@ Read `references/shaping-checklist.md` while closing:
 - Appropriate abstraction level
 
 When enough is known, summarize the shaped boundary and write the package. Do not treat this as irreversible; if packaging reveals a weak problem or boundary, move back.
+
+Use the Breadboard format from `references/breadboard.md` in `02-shape.md`: `Places`, `Affordances`, and `Connections`. Record the summary as `Shape Go` when the shape is rough, solved, and bounded enough to package.
 
 ## Package
 
