@@ -4,6 +4,12 @@ Framing closes why this problem is worth shaping.
 
 Ask questions one at a time. Do not dump the whole checklist into the chat.
 
+When asking a question:
+
+- Include your recommended answer when you can.
+- If repo docs or code can answer it, inspect them instead of asking.
+- Use concrete scenarios when the user's language is vague or overloaded.
+
 ## Close These
 
 - Problem: what is actually wrong?

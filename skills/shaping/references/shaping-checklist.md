@@ -2,6 +2,12 @@
 
 Shaping finds a buildable solution shape. Do not lock detailed UI, component structure, file paths, or task order.
 
+When asking a shaping question:
+
+- Include your recommended answer when you can.
+- If code, docs, or existing product behavior can answer it, inspect them instead of asking.
+- Use concrete scenarios to expose hidden product boundaries.
+
 ## Close These
 
 - Core change: what becomes possible for the user?

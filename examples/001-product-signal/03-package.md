@@ -73,6 +73,12 @@ Start with one product detail page where a user can toggle interest and see the 
 - Privacy: aggregate only.
 - Empty state: count can be zero and still show the action.
 
+## Testing / Verification Decisions
+
+- Behavior to protect: one user can have at most one interest signal per product.
+- Suggested feedback loop: behavior test for toggle persistence if the codebase has an existing test seam.
+- Manual/browser check: product detail toggle updates the aggregate count and can be undone.
+
 ## Technical Reality Check
 
 - Existing patterns:

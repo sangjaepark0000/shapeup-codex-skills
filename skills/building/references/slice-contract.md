@@ -7,6 +7,9 @@ The contract is not a new package. It is the smallest agreement needed to build 
 ```md
 ## Slice Contract: [Name]
 
+Mode:
+- AFK / HITL
+
 User flow:
 -
 
@@ -29,6 +32,7 @@ Current unknown:
 ## Rules
 
 - The slice must be end-to-end and demoable or verifiable.
+- Mark `AFK` when Codex can proceed inside the package; mark `HITL` when human judgment, access, review, or approval is needed.
 - Prefer the most unknown scope early.
 - Aim for `Wired but Ugly` before polish.
 - Pick the smallest trustworthy feedback loop for this slice.

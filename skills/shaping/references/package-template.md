@@ -55,6 +55,12 @@ Connections:
 - Privacy/public visibility:
 - Empty state:
 
+## Testing / Verification Decisions
+
+- Behavior to protect:
+- Suggested feedback loop:
+- Manual/browser check:
+
 ## Technical Reality Check
 
 - Existing patterns:
