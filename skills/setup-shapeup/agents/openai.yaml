@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Shape Up"
+  short_description: "Shape Up skills가 읽을 product memory와 project workspace를 초기화합니다."
+  default_prompt: "이 repo에서 Shape Up Codex skills를 쓸 수 있게 shapeup 작업 공간과 기본 문서를 세팅해줘."

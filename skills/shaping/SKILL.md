@@ -13,6 +13,14 @@ Codex와 사용자가 Shape Up 방식으로 build 전에 project를 준비하도
 - Shaping: build 중 핵심 불확실성이 터지지 않도록 solution, boundary, material unknown을 닫고 `Shape Go`를 판단한다.
 - Package: build 인계 문서로 포장하고 `Package Approval`을 받는다.
 
+## Bundled resources
+
+필요할 때만 다음 reference를 읽는다.
+
+- `references/scope-filter.md`: 후보 기능을 이번 package에 넣을지 자를지 판단할 때.
+- `references/package-template.md`: `03-package.md`를 실제로 작성할 때.
+- `references/betting-questions.md`: `Package Approved` 전에 gate를 확인할 때.
+
 ## 입출력 언어
 
 - 사용자가 쓰는 언어를 그대로 따른다.
@@ -134,7 +142,8 @@ Source of Truth: ./03-package.md
 - Package 작성 전에는 build에 남은 질문이 대부분 `어떻게`인지 확인한다.
 - Package 작성 전에는 포함 기능이 첫 package 검증에 필요한지 확인한다.
 - Package 승인 전에는 betting 질문을 통과하는지 확인한다.
-- 사용자가 승인하거나 큰 이견이 없으면 다음 단계로 진행한다.
+- `Frame Go`와 `Shape Go`는 사용자가 큰 이견을 내지 않으면 다음 단계로 진행할 수 있다.
+- `Package Approved`는 암묵 승인으로 처리하지 않는다. 사용자가 "승인", "이 package로 build", "go"처럼 명시적으로 승인해야 한다.
 - compressed mode를 사용자가 명시하거나 작업이 작으면 frame/shape/package를 짧게 진행할 수 있지만, `Frame Go`, `Shape Go`, package 승인 gate는 생략하지 않는다.
 
 ## 1. 빠른 제외 판단
@@ -368,6 +377,8 @@ Shape Go가 나지 않는 신호:
 
 Package는 shaping을 대체하지 않는다. package 단계에서 처음 중요한 product 판단이 나오면 shaping으로 되돌아간다.
 
+Package 작성 시 `references/package-template.md`를 사용한다.
+
 최소 구성:
 
 - 왜
@@ -434,6 +445,8 @@ Codex execution budget:
 ## 7. Package 승인
 
 Package를 썼다고 자동으로 build로 넘어가지 않는다. Package Approval은 Framing 승인이 아니다.
+
+승인 전에 `references/betting-questions.md`를 사용한다.
 
 - Framing은 shaping할 가치가 있는 문제인지 승인한다.
 - Shaping은 build 가능한 solution과 boundary가 나왔는지 승인한다.

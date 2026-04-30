@@ -7,6 +7,16 @@ description: 사용자가 승인된 Shape Up package를 기반으로 build를 �
 
 승인된 Shape Up package를 실제 동작하는 결과물로 만드는 단계다. 목표는 package의 `왜/무엇/어디까지`를 다시 열지 않고, build 중 발견되는 task와 scope를 다루며 timebox 안에서 meaningful feature를 끝내는 것이다.
 
+## Bundled resources
+
+필요할 때만 다음 reference를 읽는다.
+
+- `references/kickoff-template.md`: `04-build-kickoff.md`를 만들 때.
+- `references/scope-map-template.md`: `05-scope-map.md`를 만들거나 hill status를 갱신할 때.
+- `references/build-log-template.md`: `06-build-log.md`와 slice contract를 기록할 때.
+- `references/release-template.md`: `07-release.md`를 만들 때.
+- `references/retro-template.md`: `08-retro.md`를 만들 때.
+
 ## 입출력 언어
 
 - 사용자가 쓰는 언어를 그대로 따른다.
@@ -119,6 +129,8 @@ Source of Truth: ./03-package.md
 
 build 시작 전에 `04-build-kickoff.md`를 만든다. 기존 cycle 구조에서는 `build-kickoff.md`를 유지해도 된다. 이 문서는 package를 다시 shape하지 않고, 실행을 시작하기 위한 최소 합의만 담는다.
 
+작성 시 `references/kickoff-template.md`를 사용한다.
+
 포함할 항목:
 
 - Package 기준 요약
@@ -149,6 +161,8 @@ build 초기에 떠오르는 task를 대략 적는다. 이 task 목록은 약속
 ## 5. Scope Map
 
 task를 사람, 화면, 기술 layer가 아니라 concern 중심의 scope로 묶는다.
+
+작성 또는 갱신 시 `references/scope-map-template.md`를 사용한다.
 
 좋은 scope:
 
