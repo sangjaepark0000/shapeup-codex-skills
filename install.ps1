@@ -1,30 +1,42 @@
+[CmdletBinding(SupportsShouldProcess = $true)]
+param(
+  [ValidateSet("setup-shapeup", "shaping", "building")]
+  [string[]]$Skill = @("setup-shapeup", "shaping", "building"),
+
+  [string]$Target
+)
+
 $ErrorActionPreference = "Stop"
 
 $repo = Split-Path -Parent $MyInvocation.MyCommand.Path
-$skillsHome = if ($env:CODEX_HOME) {
+$skillsHome = if ($Target) {
+  $Target
+} elseif ($env:CODEX_HOME) {
   Join-Path $env:CODEX_HOME "skills"
 } else {
   Join-Path $env:USERPROFILE ".codex\skills"
 }
 
-$skills = @(
-  "setup-shapeup",
-  "shaping",
-  "building"
-)
+if ($PSCmdlet.ShouldProcess($skillsHome, "Create skills directory")) {
+  New-Item -ItemType Directory -Force -Path $skillsHome | Out-Null
+}
 
-New-Item -ItemType Directory -Force -Path $skillsHome | Out-Null
-
-foreach ($skill in $skills) {
-  $source = Join-Path $repo "skills\$skill"
-  $target = Join-Path $skillsHome $skill
+foreach ($skillName in $Skill) {
+  $source = Join-Path $repo "skills\$skillName"
+  $installPath = Join-Path $skillsHome $skillName
 
   if (-not (Test-Path $source)) {
     throw "Missing skill directory: $source"
   }
 
-  Copy-Item -Recurse -Force $source $target
-  Write-Host "Installed $skill -> $target"
+  if ($PSCmdlet.ShouldProcess($installPath, "Install $skillName")) {
+    Copy-Item -Recurse -Force $source $installPath
+    Write-Host "Installed $skillName -> $installPath"
+  }
 }
 
-Write-Host "Shape Up Codex skills installed."
+if ($WhatIfPreference) {
+  Write-Host "Shape Up Codex skills install preview complete."
+} else {
+  Write-Host "Shape Up Codex skills installed."
+}

@@ -25,6 +25,13 @@ Install the skills:
 .\install.ps1
 ```
 
+Install one skill or preview the install:
+
+```powershell
+.\install.ps1 -Skill shaping
+.\install.ps1 -Target "$env:USERPROFILE\.codex\skills" -WhatIf
+```
+
 Then run these in Codex:
 
 ```text
@@ -55,6 +62,18 @@ Set up this repo for the Shape Up Codex skills.
 Shape this feature into a package before building.
 The package is approved. Start building from it.
 ```
+
+## When Not To Use This
+
+Do not use Shape Up for every task. Prefer a lighter flow for:
+
+- urgent production bugs
+- tiny chores
+- pure research or unknown-first exploration
+- dependency tracking
+- launch cleanup and punch lists
+
+See `examples/000-not-shapeup/` for a concrete example.
 
 ## Skills
 
