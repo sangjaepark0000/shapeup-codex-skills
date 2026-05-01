@@ -17,8 +17,10 @@ description: 사용자가 승인된 Shape Up package를 기반으로 build를 �
 
 - 승인된 package가 있어야 한다.
 - 사용자가 package 파일 경로만 주면 승인으로 간주하지 않는다.
-- build를 시작하려면 사용자의 명시 승인, `project.md`의 `Package Approved`, 또는 package 안의 approval marker 중 하나가 있어야 한다.
-- package가 없거나 승인 여부가 불명확하면 build를 시작하지 말고 package approval 확인 또는 package review로 되돌린다.
+- build를 시작하려면 사용자의 승인 intent, `project.md`의 `Package Approved`, 또는 package 안의 approval marker 중 하나가 있어야 한다.
+- 사용자가 building skill/chip을 명시적으로 호출했거나, "building 시작", "이 package로 구현 진행", "Shape Up build 단계로 가자", "현재 package로 진행"처럼 현재 package를 기준으로 build를 요청하면 승인 intent로 간주한다.
+- 단순히 package 파일 경로만 주거나, "검토", "점검", "어떻게 생각해"처럼 review 의도가 더 강하면 승인 intent로 간주하지 않는다.
+- package가 없거나 현재 package를 특정할 수 없으면 build를 시작하지 말고 package 경로 또는 package review로 되돌린다.
 - 새 세션은 package 경로만으로 build kickoff 맥락을 복원할 수 있어야 한다.
 
 ## Core Rules
